@@ -24,7 +24,7 @@ import { MailOptions } from "nodemailer/lib/json-transport";
 
 			const mail: MailOptions = {
 				from: process.env.ADDRESS,
-				to: "no@address.void",
+				to: process.env.ADDRESS,
 				subject: `IP @ ${new Date().toISOString()}`,
 				text: await response.text()
 			};
